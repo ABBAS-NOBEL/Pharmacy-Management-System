@@ -755,11 +755,23 @@ public class PharmacyGUI extends JFrame implements ActionListener, MouseListener
 		}*/
 	}
     public void mouseEntered(MouseEvent me) {
-		if(me.getSource() ==loginBtn )
-		{
-			loginBtn.setBackground(Color.GREEN);
-			loginBtn.setForeground(Color.BLACK);
-		}
-	}
-    public void mouseExited(MouseEvent me) {}
+    if(me.getSource() == exitBtn || me.getSource() == regExitBtn || 
+       me.getSource() == exitCartBtn || me.getSource() == exitMedBtn) {
+        
+        JButton button = (JButton) me.getSource();
+        button.setBackground(Color.ORANGE);
+        button.setForeground(Color.BLACK);
+    }
+}
+
+	public void mouseExited(MouseEvent me) {
+    if(me.getSource() == exitBtn || me.getSource() == regExitBtn || 
+       me.getSource() == exitCartBtn || me.getSource() == exitMedBtn) {
+        
+        JButton button = (JButton) me.getSource();
+        button.setBackground(Color.RED);
+        button.setForeground(Color.WHITE);
+    }
+}
+
 }
